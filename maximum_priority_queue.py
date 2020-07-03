@@ -18,6 +18,8 @@ class MaximumPriorityQueue:
         self.heap_instance.nums[0], self.heap_instance.nums[self.heap_instance.heap_length-1] = self.heap_instance.nums[self.heap_instance.heap_length-1], self.heap_instance.nums[0]
         self.heap_instance.heap_length -= 1
         self.heap_instance.max_heapify(0)
+        self.heap_instance.nums.pop(-1)
+        self.heap_instance.nums_length -= 1
         return max
 
     def increase_key(self, index: int, key):
@@ -32,9 +34,9 @@ class MaximumPriorityQueue:
 
     def insert(self, key):
         self.heap_instance.heap_length += 1
-        self.heap_instance.nums_length += 1
-        if self.heap_instance.heap_length == self.heap_instance.nums_length:
-            self.heap_instance.nums.append(float('-inf'))
-        else:
+        if self.heap_instance.heap_length <= self.heap_instance.nums_length:
             self.heap_instance.nums[self.heap_instance.heap_length - 1] = float('-inf')
+        else:
+            self.heap_instance.nums.append(float('-inf'))
+            self.heap_instance.nums_length += 1
         self.increase_key(self.heap_instance.heap_length-1, key)
