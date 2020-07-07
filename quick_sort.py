@@ -20,4 +20,4 @@ class QuickSort:
         if p < r:
             q = self.partition(p, r)
             self.quick_sort(p, q-1)
-            self.quick_sort(q, r)
+            self.quick_sort(q+1, r)
