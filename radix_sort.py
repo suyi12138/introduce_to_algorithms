@@ -8,7 +8,7 @@ class RadixSort:
         self.nums = nums
         # 待排序数组中的每个元素的位数
         self.d = d
-        # 待排序数组中每个元素每一位的可能取值个数
+        # 待排序数组中每个元素每一位可能取值个数
         self.k = k
 
     def radix_sort(self):
