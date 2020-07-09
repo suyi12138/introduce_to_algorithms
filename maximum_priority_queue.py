@@ -1,4 +1,4 @@
-# 6.5
+# 6.5 最大优先队列
 from heap import Heap
 
 class MaximumPriorityQueue:
