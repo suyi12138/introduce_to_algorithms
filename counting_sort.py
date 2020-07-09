@@ -7,7 +7,7 @@ class CountingSort:
         self.nums = nums
         # 待排序数组中元素的最大可能值
         self.max = max
-        # 待排序数组的长度
+        # 待排序数组元素个数
         self.length = len(nums)
 
     def counting_sort(self):
